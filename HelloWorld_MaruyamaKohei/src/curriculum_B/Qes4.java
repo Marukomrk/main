@@ -6,7 +6,7 @@ public class Qes4 {
 			for (int j = 1; j <= 9; j++) {
 				int result = i * j;
 				// 式を出力
-				System.out.printf("%02d ＊ %02d = %02d", i, j, result);
+				System.out.printf("%02d ＊ %02d = %02d", i, j, result,"\n");
                 if (j < 9) {
                 	// 式と式の間にパイプ記号を出力
                     System.out.print(" | | ");

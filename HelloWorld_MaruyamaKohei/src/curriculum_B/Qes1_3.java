@@ -52,19 +52,24 @@ public class Qes1_3 {
 				winCount++;
 				System.out.println("やるやん。");
 				System.out.println("次は俺にリベンジさせて");
+
 			} else if (result == 2) {
 				// 負けた場合
 				System.out.println("俺の勝ち！");
+
 				if (computerHand == 0) {
 					System.out.println("負けは次につながるチャンスです！");
 					System.out.println("ネバーギブアップ！");
+
 				} else if (computerHand == 1) {
 					System.out.println("たかがじゃんけん、そう思ってないですか？");
 					System.out.println("それやったら次も、俺が勝ちますよ");
+
 				} else if (computerHand == 2) {
 					System.out.println("なんで負けたか、明日まで考えといてください。");
 					System.out.println("そしたら何かが見えてくるはずです");
 				}
+
 			} else {
 				// あいこの場合
 				System.out.println("DRAW あいこ もう一回しましょう！");
