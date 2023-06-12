@@ -1,6 +1,5 @@
 package curriculum_B;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Qes1_3 {
@@ -11,25 +10,30 @@ public class Qes1_3 {
 	public static void login() {
 		// コンソールにユーザー名を入力できるようにする
 		Scanner scanner = new Scanner(System.in);
-		// ユーザー名の入力
-		System.out.print("ユーザー名を入力してください: ");
-		String username = scanner.nextLine();
-		// ユーザー名の文字数が0文字以下もしくはnullの場合「名前を入力してください」と出力
-		if (Objects.isNull(username) || username.length() <= 0) {
-			System.out.println("名前を入力してください");
-			// ユーザー名の文字数が10文字より大きい場合「名前を10文字以内にしてください」と出力
-		} else if (username.length() > 10) {
-			System.out.println("名前を10文字以内にしてください");
-			// ユーザー名が半角英数字以外の場合「半角英数字のみで名前を入力してください」と出力してください
-		} else if (!username.matches("[a-zA-Z0-9]+")) {
-			System.out.println("半角英数字のみで名前を入力してください");
-			// ユーザー名が正常な値だった場合「ユーザー名「 入力したユーザー名 」を登録しました」と出力
-		} else {
-			System.out.println("ユーザー名「" + username + "」を登録しました");
+		// ユーザー名の変数を初期化
+		String username = "";
+		while (true) {
+			// ユーザーに名前の入力を求める
+			System.out.print("ユーザー名を入力してください: ");
+			// ユーザーが入力した名前を変数に格納
+			username = scanner.nextLine();
+
+			if (username == null || username.length() <= 0) {
+				// 名前が入力されていない場合のエラーメッセージ
+				System.out.println("名前を入力してください");
+			} else if (username.length() > 10) {
+				// 名前が10文字を超える場合のエラーメッセージ
+				System.out.println("名前を10文字以内にしてください");
+			} else {
+				// 正しい名前が入力されたのでループを抜ける
+				break;
+			}
 		}
 
-		int winCount = 0;
-		int totalGames = 0;
+		System.out.println("ユーザー名「" + username + "」を登録しました"); // 登録メッセージ
+
+		int winCount = 0; // 勝利回数の変数を初期化
+		int totalGames = 0; // 総プレイ回数の変数を初期化
 
 		while (winCount == 0) {
 			totalGames++;
