@@ -10,9 +10,13 @@ public class Qes1_3 {
 	public static void login() {
 		// コンソールにユーザー名を入力できるようにする
 		Scanner scanner = new Scanner(System.in);
+
+		// フラグ変数を初期化
+		boolean flug = false;
 		// ユーザー名の変数を初期化
 		String username = "";
-		while (true) {
+		// フラグが true になるまでループを実行
+		while (!flug) {
 			// ユーザーに名前の入力を求める
 			System.out.print("ユーザー名を入力してください: ");
 			// ユーザーが入力した名前を変数に格納
@@ -24,16 +28,22 @@ public class Qes1_3 {
 			} else if (username.length() > 10) {
 				// 名前が10文字を超える場合のエラーメッセージ
 				System.out.println("名前を10文字以内にしてください");
+			} else if (!username.matches("[a-zA-Z0-9]+")) {
+				// 名前が半角英数字以外で入力された場合のエラーメッセージ
+				System.out.println("半角英数字のみで名前を入力してください");
 			} else {
 				// 正しい名前が入力されたのでループを抜ける
-				break;
+				flug = true;
 			}
 		}
 
-		System.out.println("ユーザー名「" + username + "」を登録しました"); // 登録メッセージ
+		// 登録メッセージ
+		System.out.println("ユーザー名「" + username + "」を登録しました" + "\n");
 
-		int winCount = 0; // 勝利回数の変数を初期化
-		int totalGames = 0; // 総プレイ回数の変数を初期化
+		// 勝利回数の変数を初期化
+		int winCount = 0;
+		// 総プレイ回数の変数を初期化
+		int totalGames = 0;
 
 		while (winCount == 0) {
 			totalGames++;
