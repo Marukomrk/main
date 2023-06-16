@@ -6,7 +6,7 @@ public class Curriculum_New_1_18 {
 	public static void main(String[] args) {
 
 		// Q1：引数に文字列型と整数型をいれてコンソールに「Hello JavaSE 11」と出力するメソッドを作成してください。
-		printMessage("Hello JavaSE 11", 5);
+		printHello("JavaSE", 11);
 
 		// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
 		multiplyNumbers(3, 4);
@@ -16,7 +16,7 @@ public class Curriculum_New_1_18 {
 		printArrayElements(array);
 
 		// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
-		addNumbers(2.5, 3.7);
+		multiplyNumbers(2.5, 1.7);
 
 		// Q5：引数に整数を渡すと、1～100までのランダムな数字を引数の回数分格納して
 		// 格納した値を順番にコンソールで出力後、格納した値を返すメソッドを作成してください。
@@ -37,9 +37,9 @@ public class Curriculum_New_1_18 {
 	}
 
 	//Q1 引数に文字列型と整数型をいれてコンソールに「Hello JavaSE 11」と出力するメソッド
-	public static void printMessage(String message, int number) {
+	public static void printHello(String text, int number) {
 		// コンソールにメッセージを出力
-		System.out.println(message + "\n");
+		System.out.println("Hello " + text + " " + number + "\n");
 	}
 
 	// Q2 引数同士を乗算しコンソールに出力するメソッド
@@ -60,7 +60,7 @@ public class Curriculum_New_1_18 {
 	}
 
 	// Q4 引数同士を和算しコンソールに出力するメソッド
-	public static void addNumbers(double num1, double num2) {
+	public static void multiplyNumbers(double num1, double num2) {
 		// 和算結果を計算
 		double result = num1 + num2;
 		// コンソールに結果を出力
