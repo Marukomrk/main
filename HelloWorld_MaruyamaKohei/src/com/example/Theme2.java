@@ -18,7 +18,9 @@ import com.example.logic.Logic;
 
 public class Theme2 {
 	public static void main(String[] args) {
+		// インスタンスを作成
 		Logic logic = new Logic();
+		// メソッドを呼び出してメッセージを出力
 		logic.outputMessages();
 	}
 }
