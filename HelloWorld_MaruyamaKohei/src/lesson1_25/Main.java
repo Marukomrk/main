@@ -21,15 +21,23 @@ MP：862
 
 package lesson1_25;
 
+import java.util.Scanner;
+
 public class Main {
 	public static void main(String[] args) {
+		// 名前の入力
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("名前を入力してください: ");
+		String name = scanner.nextLine();
+		scanner.close();
+
 		// 名前を指定してプレイヤーオブジェクトを作成する
-		Player player = new Player("「 名前 」");
+		Player player = new Player(" 「 " + name + " 」 ");
 		// ステータスをランダムに設定
 		player.randomizeStats();
 		// ステータスを出力
 		player.outputDetails();
 		// メッセージを出力する
-		System.out.println("\n" + "さあ冒険に出かけよう！");
+		System.out.println("\nさあ冒険に出かけよう！");
 	}
 }
