@@ -37,4 +37,13 @@ public class Animal {
 	public void setSpeed(double speed) {
 		this.speed = speed;
 	}
+
+	public void outputDetails(Animal animal) {
+		// 動物名を出力
+		System.out.println("動物名：" + animal.getName());
+		// 体長を出力
+		System.out.println("体長：" + animal.getLength() + "m");
+		// 速度を出力
+		System.out.println("速度：" + animal.getSpeed() + "km/h");
+	}
 }
