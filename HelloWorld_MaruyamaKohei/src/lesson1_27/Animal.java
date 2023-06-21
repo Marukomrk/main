@@ -49,7 +49,7 @@ public class Animal {
 		System.out.println("コンソールに文字を入力してください");
 		String input = scanner.nextLine();
 		// 入力を取得してセット	
-		setConsoleInput(scanner.nextLine());
+		setConsoleInput(input);
 
 		// 動物ごとにデータを分割
 		String[] animals = input.split(",");
