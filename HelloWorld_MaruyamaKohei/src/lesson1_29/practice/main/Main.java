@@ -47,13 +47,17 @@ public class Main {
 		System.out.println("都道府県の配列インデックスを入力してください（カンマ区切り）:");
 		String inputIndices = scanner.nextLine();
 
-		// 入力されたインデックスをコンストラクタを使って処理
+		// 並び替え方を選択
+		System.out.println("並び替え方を選択してください（1: 昇順、2: 降順）:");
+		int sortOrder = scanner.nextInt();
+
+		// Sorterオブジェクトの生成
 		Sorter sorter = new Sorter(inputIndices);
 
-		// 昇順でソート実行
-		String[] sortedPrefectures = sorter.sortPrefectures(true);
+		// 都道府県情報を並び替えて取得
+		String[] sortedPrefectures = sorter.sortPrefectures(sortOrder == 1);
 
-		// 結果出力
+		// 並び替え結果の出力
 		sorter.printPrefectures(sortedPrefectures);
 
 		scanner.close();

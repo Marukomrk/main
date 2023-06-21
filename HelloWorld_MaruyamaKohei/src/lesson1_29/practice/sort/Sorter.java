@@ -19,7 +19,7 @@ public class Sorter {
 			"埼玉県:さいたま市:3798"
 	};
 
-	// 都道府県をソートするメソッド
+	// 選択されたインデックスを格納する配列
 	private int[] indices;
 
 	public Sorter(String inputIndices) {
