@@ -24,7 +24,7 @@ public class Person {
 	// インスタンスメソッド「bmi」を定義
 	double bmi() {
 		// BMIを計算し値を返す
-		return Math.floor(weight / this.height / this.height * 10.0) / 10.0;
+		return Math.round(weight / this.height / this.height * 10) / 10;
 	}
 
 	// インスタンスメソッド「print」を定義
