@@ -47,7 +47,5 @@ public class Person {
 	public static void printCount() {
 		// 合計人数を表示する
 		System.out.println("合計" + count + "人です");
-
-		Person.printCount();
 	}
 }

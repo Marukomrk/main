@@ -9,6 +9,6 @@ public class Main {
 		person2.print();
 
 		// 合計人数を表示する
-		System.out.println("合計" + Person.getCount() + "人です");
-	}
+		Person.printCount();
+	}	
 }
