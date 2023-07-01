@@ -12,9 +12,13 @@ public class Main {
 		// Bicycleクラスのインスタンスを生成し、bicycleという変数に代入
 		Bicycle bicycle = new Bicycle();
 
-		// person1がcarを購入する
-		person1.buy(car);
-		// person2がbicycleを購入する
-		person2.buy(bicycle);
+		// Carの所有者を設定
+		car.setOwner(person1.fullName());
+		// Bicycleの所有者を設定
+		bicycle.setOwner(person2.fullName());
+
+		// それぞれ出力
+		System.out.println(car.getOwner() + "が購入しました");
+		System.out.println(bicycle.getOwner() + "が購入しました");
 	}
 }

@@ -19,19 +19,17 @@ public class Person {
 
 	// フルネームを返すメソッド
 	public String fullName() {
-		return firstName + " " + lastName;
+		return firstName + "" + lastName;
 	}
 
 	// Carオブジェクトを購入するメソッド
 	public void buy(Car car) {
 		car.setOwner(this.fullName());
-		System.out.println(car.getOwner() + "が購入しました");
 	}
 
 	// Bicycleオブジェクトを購入するメソッド
 	public void buy(Bicycle bicycle) {
 		bicycle.setOwner(this.fullName());
-		System.out.println(bicycle.getOwner() + "が購入しました");
 	}
 
 	// 年齢を取得するメソッド
