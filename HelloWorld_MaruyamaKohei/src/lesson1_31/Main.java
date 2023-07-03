@@ -20,5 +20,8 @@ public class Main {
 		// それぞれ出力
 		System.out.println(car.getOwner() + "が購入しました");
 		System.out.println(bicycle.getOwner() + "が購入しました");
+		
+		person1.buy(car);
+		person2.buy(bicycle);
 	}
 }
